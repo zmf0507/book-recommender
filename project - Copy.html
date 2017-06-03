@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet "type="text/css" href="testnew.css">
+<link rel="stylesheet "type="text/css" href="project.css">
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+function validateForm() {
+
+var books = ["history", "concepts", "concepts of physics", "operating system", "computer organisation", "analog and communications"];
+var hist = ["The Origin of Species(1859) by Charles Darwin ", "Mathematical Principles of Natural Philosophy by Isaac Newton (1687)", "Dialogue Concerning the Two Chief World Systems by Galileo Galilei (1632)", "What Is Life? by Erwin Schrödinger (1944)"];
+var com = ["operating system", "computer organisation", "System software", "Data Structures", "Digital logic theory"];
+var pol = ["All the King’s Men by Robert Penn Warren", "Echo House by Ward Just", "I, Claudius by Robert Graves", "Team of Rivals by Doris Kearns Goodwin"];
+var phi = ["Meditations by Marcus Aurelius", "Letters from a Stoic by Seneca", "The Moral Sayings of Publius Syrus"];
+var eco = ["Microeconomics: Pindyck and Rubinfield", "International Trade and Monetary Policy: Krugman and Obstfeld", "Labor (employment): Borjas ", "Macroeconomics: Mankiw"];
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+else
+{
+if(x=="Type the category of the books")
+{
+document.getElementById("main").innerHTML="Enter a category to search for a book";
+  return false;
+
+}
+else
+if(x == "commerce" || x == "COMMERCE")
+{
+
+ document.getElementById("main").innerHTML="SEARCHES RESULT:" + "<br>" + eco[0] + "<br>" +  eco[1] + "<br>" + eco[2] + "<br>" + eco[3] + "<br>" + eco[4] + "<br>";
+  return false;
+
+}
+else
+if(x == "philosophy" || x == "PHILOSOPHY")
+{
+
+ document.getElementById("main").innerHTML="SEARCHES RESULT:" + "<br>" + phi[0] + "<br>" +  phi[1] + "<br>" + phi[2] + "<br>";
+  return false;
+
+}
+else
+if(x == "science" || x == "SCIENCE")
+{
+
+ document.getElementById("main").innerHTML="SEARCHES RESULT:" + "<br>" + books[0] + "<br>" +  books[1] + "<br>" + books[2] + "<br>" + books[3] + "<br>" + books[4] + "<br>";
+  return false;
+
+}
+else
+if(x == "history" || x == "HISTORY")
+{
+
+ document.getElementById("main").innerHTML="SEARCHES RESULT:" + "<br>" + hist[0] + "<br>" +  hist[1] + "<br>" + hist[2] + "<br>" + hist[3] + "<br>" + hist[4] + "<br>";
+  return false;
+
+}
+
+else
+if(x == "COMPUTER" || x == "computer")
+{
+
+ document.getElementById("main").innerHTML="SEARCHES RESULT:" + "<br>" + com[0] + "<br>" +  com[1] + "<br>" + com[2] + "<br>" + com[3] + "<br>" + com[4] + "<br>";
+  return false;
+
+}
+if(x == "politics" || x == "POLITICS")
+{
+
+ document.getElementById("main").innerHTML="SEARCHES RESULT:" + "<br>" + pol[0] + "<br>" +  pol[1] + "<br>" + pol[2] + "<br>" + pol[3] + "<br>";
+  return false;
+
+}
+else
+{
+document.getElementById("main").innerHTML="OOPS!" + "<br>" + "This category doesnt exist in our database ";
+return false;
+}
+
+}
+}
+</script>
+</head>
+<body>
+
+<div class="zed">
+<div id="zmf1"><h3> Categories</h3></div>
+<div id="zmf2"><h3> SCIENCE</h3></div>
+<div id="zmf3"><h3>COMPUTERS</h3></div>
+<div id="zmf4"><h3> PHILOSOPHY</h3></div>
+<div id="zmf5"><h3> HISTORY</h3></div>
+<div id="zmf6"><h3> COMMERCE</h3></div>
+<div id="zmf7"><h3></h3></div>
+<div id="zmf8"><h3></h3></div>
+</div>
+
+<div class="main">
+<h1><span class="b">Book</span> <span class="r">Recommender</span> <span class="s">System</span></h1>
+</div>
+
+
+
+<form name="myForm"
+onsubmit="return validateForm()" method="post">
+<div class="book">
+<input type="text" name="fname" value="Type the category of the books">
+</div>
+<div class="bkk">
+<input type="submit" value="Submit">
+</div>
+</form>
+
+<div class="result">
+<h3 id="main">
+Results
+</h3>
+</div>
+
+<div class="amazon">
+<h3><a href="http://www.amazon.in/Books/b/ref=nav_shopall_books_all?ie=UTF8&node=976389031">Search on AMAZON'S bookstore</a></h3>
+</div>
+<div class="flipkart">
+<h3><a href="http://www.flipkart.com/books?otracker=hp_header_nmenu_sub_Books%20and%20Media_0_Books">Search on Flipkart's bookstore</a></h3>
+</div>
+</body>
+<script src="testnew.js" type="text/script">
+</html>
+
